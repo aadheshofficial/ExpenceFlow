@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 let baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// let baseURL = 'http://localhost:5000/api';
 if (baseURL && !baseURL.endsWith('/api') && !baseURL.endsWith('/api/')) {
   baseURL = baseURL.replace(/\/$/, '') + '/api';
 }
@@ -24,3 +25,4 @@ api.interceptors.request.use(
 );
 
 export default api;
+
